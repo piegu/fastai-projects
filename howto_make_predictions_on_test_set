@@ -1,0 +1,17 @@
+Source : http://forums.fast.ai/t/dog-breed-identification-challenge/7464/144?u=pierreguillou
+
+The following methodology works to make predictions on the test set when it was not initially given to the data object. 
+A idea : you must rerun your object data with test_name='test' and then, with learn.set_data(data).
+
+The 3 lines of code are :
+
+data = ImageClassifierData.from_csv(PATH, 
+                                        'train', f'{label_csv}',
+                                         test_name='test',
+                                         num_workers=4,
+                                         val_idxs=val_idxs, 
+                                         suffix='.jpg', 
+                                         tfms=tfms, 
+                                         bs=bs)
+learn.set_data(data)
+log_preds,y = learn.TTA(is_test=True)
