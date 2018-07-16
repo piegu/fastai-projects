@@ -11,3 +11,6 @@ Link to the thread : http://forums.fast.ai/t/deep-learning-brasilia-revisao-lico
 
 ## How to make predictions on the test set when it was not initially given to the data object
 https://github.com/piegu/fastai-projects/blob/master/howto_make_predictions_on_test_set
+
+## Mastercard or Visa ? Image classification with Transfer Learning and Fastai
+https://github.com/piegu/fastai-projects/blob/master/mastercard_visa_classifier_fastai_resnet34_PierreGuillou_16july2018.ipynb
