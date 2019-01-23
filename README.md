@@ -5,7 +5,6 @@ Jupyter notebooks that use the Fastai library
 
 ### Data Augmentation by fastai v1
 The jupyter notebook data-augmentation-by-fastai-v1.ipynb (https://github.com/piegu/fastai-projects/blob/master/data-augmentation-by-fastai-v1.ipynb) presents the code to apply transformations on images with fastai v1.
-Link to the corresponding post on medium: (...)
 
 ## fastai version BEFORE v1.0
 
