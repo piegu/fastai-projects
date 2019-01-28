@@ -6,6 +6,9 @@ Jupyter notebooks that use the Fastai library
 ### Data Augmentation by fastai v1
 The jupyter notebook data-augmentation-by-fastai-v1.ipynb (https://github.com/piegu/fastai-projects/blob/master/data-augmentation-by-fastai-v1.ipynb) presents the code to apply transformations on images with fastai v1.
 
+### Pretrained ImageNet Classifier by fastai v1
+The objective of the jupyter notebook pretrained-imagenet-classifier-fastai-v1.ipynb (https://github.com/piegu/fastai-projects/blob/master/pretrained-imagenet-classifier-fastai-v1.ipynb) is to use fastai v1 instead of Pytorch code in order to classify images into 1000 classes by using an ImageNet winner model.
+
 ## fastai version BEFORE v1.0
 
 ### Lesson 1 (part 1) : CatsDogs, the quick way 
