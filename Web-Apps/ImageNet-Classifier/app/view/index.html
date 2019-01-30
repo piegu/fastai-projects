@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen, handheld" />
+    <script src='../static/client.js'></script>
+    <title>ImageNet Classifier by Pierre Guillou</title>
+  </head>
+
+  <body>
+
+    <div class='section menu'></div>
+
+    <div class='page'>
+
+        <div class='section header'>
+          <header class='top-header'>
+            <div><a href='http://image-net.org/' target='_blank' title='Site of ImageNet'>
+                <img src='../static/images/logo_imagenet.jpg'></a>
+            </div>
+            <h1>Take a picture and classify it </h1>
+          </header>
+        </div>
+
+        <div class='section content'>
+            <div class='main center'>
+                <div class='no-display'>
+                    <input id='file-input'
+                            class='no-display'
+                            type='file'
+                            name='file'
+                            accept='image/*'
+                            onchange='showPicked(this)'>
+                </div>
+                <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+                <div class='analyze'>
+                    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+                </div>
+                <div class='result-label'>
+                    <label id='result-label'></label>
+                </div>
+                <div class="image-picked">
+                    <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+                </div>
+                <div class='upload-label'>
+                    <label id='upload-label' class='center'>No file chosen</label>
+                </div>
+            </div>
+        </div>
+
+      <div class="section notes">
+        <p>Our classifier use the Deep Learning model <a href='https://pytorch.org/docs/stable/torchvision/models.html#torchvision.models.resnet152' target='_blank'>resnet152</a> that won the ImageNet competition in 2015 (<a href='http://image-net.org/challenges/LSVRC/2015/' target='_blank'>ILSVRC2015</a>).
+        <br />It can classify an image into 1000 categories (<a href='https://www.kaggle.com/c/imagenet-object-localization-challenge/data' target='_blank' title="Download file LOC_synset_mapping.txt">list in the ImageNet Kaggle competition</a>).</p>
+      </div>
+
+    </div>
+
+    <div class='section footer'>
+      <p>Created by <a href="https://www.linkedin.com/in/pierreguillou" title="profile Linkedin of Pierre Guillou" target="_blank">Pierre Guillou</a> (Jan. 2019)
+      <br />with <a href="https://docs.fast.ai/" target="_blank">fastai v1</a> and <a href="https://www.render.com/" target="_blank">Render</a></p>
+    </div>
+
+  </body>
+</html>
