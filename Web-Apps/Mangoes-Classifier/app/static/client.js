@@ -26,23 +26,23 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             // el('result-label').innerHTML = `Result = ${response['result']}`;
             if (response['class'] < 2) {
-            if (response['class'] == 0) {
-                bgc_class = 'palmer'
-            }
-            else {
-                bgc_class = 'tommy-atkins'
-            }
-            el('result-label').innerHTML = `<div class="result-style">
-                                                <div class="recognized ${bgc_class}">${response['prediction']}</div>
-                                                <div>confidence of ${response['prob']}</div>
-                                                <div class="probs">${response['probs'][0]}, ${response['probs'][1]}</div>
-                                            </div>`;
+                if (response['class'] == 0) {
+                    bgc_class = 'palmer'
+                }
+                else {
+                    bgc_class = 'tommy-atkins'
+                }
+                el('result-label').innerHTML = `<div class="result-style">
+                                                    <div class="recognized ${bgc_class}">${response['prediction']}</div>
+                                                    <div>confidence of ${response['prob']}</div>
+                                                    <div class="probs">${response['probs'][0]}, ${response['probs'][1]}</div>
+                                                </div>`;
             } else {
-            el('result-label').innerHTML = `<div class="result-style">
-                                                <div class="unrecognized">Image unrecognized</div>
-                                                <div class="probs">${response['probs'][0]}, ${response['probs'][1]}</div>
-                                            </div>`;
-            }
+                el('result-label').innerHTML = `<div class="result-style">
+                                                    <div class="unrecognized">Image unrecognized</div>
+                                                    <div class="probs">${response['probs'][0]}, ${response['probs'][1]}</div>
+                                                </div>`;
+                }
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
@@ -51,4 +51,3 @@ function analyze() {
     fileData.append('file', uploadFiles[0]);
     xhr.send(fileData);
 }
-
