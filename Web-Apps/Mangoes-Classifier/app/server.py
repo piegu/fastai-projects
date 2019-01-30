@@ -48,7 +48,7 @@ def index(request):
     html = path/'view'/'index.html'
     # html = open(html, encoding="utf-8")
     # return HTMLResponse(html.read())
-    return HTMLResponse(html.open().read().decode("utf8"))
+    return HTMLResponse(html.open().read())
 
 # @app.route('/analyze', methods=['POST'])
 # async def analyze(request):
