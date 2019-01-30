@@ -48,15 +48,54 @@ def index(request):
     html = path/'view'/'index.html'
     # html = open(html, encoding="utf-8")
     # return HTMLResponse(html.read())
-    return HTMLResponse(html.open().read())
+    return HTMLResponse(html.open().read().decode("utf8"))
+
+# @app.route('/analyze', methods=['POST'])
+# async def analyze(request):
+#     data = await request.form()
+#     img_bytes = await (data['file'].read())
+#     img = open_image(BytesIO(img_bytes))
+#     prediction = learn.predict(img)[0]
+#     return JSONResponse({'result': str(prediction)})
+
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
+
+    # label prediction function 
+    # to get a prediction with 90% of confidence in each class, it is necessary to setup distinct thresholds
+    # Our classifier detects with more facility class 0 than class 1
+    def predict_label(img, ths=[0.8535353535353536, 0.6414141414141414], model=learn):
+        
+        # Condition function
+        def cond(idx):
+            return (indice == idx) and (pred >= ths[idx])
+
+        # Get prediction values
+        cat, indice, preds = model.predict(img)
+        pred, _ = torch.max(preds, 0)
+        indice = indice.item()
+        pred = pred.item()
+        preds = list(preds)
+
+        # Check the confidence of the classifier in its prediction
+        if cond(0) or cond(1):
+            prediction = cat
+        else:
+            prediction = 'unrecognized'
+            indice = 2
+        
+        return prediction, indice, pred, preds
+
     data = await request.form()
     img_bytes = await (data['file'].read())
     img = open_image(BytesIO(img_bytes))
-    prediction = learn.predict(img)[0]
-    return JSONResponse({'result': str(prediction)})
+    prediction, indice, pred, preds = predict_label(img)
+    prob = f'{np.round(100*pred,2)}%'
+    probs = [f'{np.round(100*preds[i].item(),2)}%' for i in range(2)]
+    probs = [f'Palmer ({probs[0]})', f'Tommy Atkins ({probs[1]})']
+    return JSONResponse({'prediction': str(prediction), 'class': indice, 'prob': prob, 'probs': probs})
+
 
 if __name__ == '__main__':
     if 'serve' in sys.argv: uvicorn.run(app=app, host='0.0.0.0', port=5042)
