@@ -6,4 +6,4 @@ It is an images classifier that use the Deep Learning model [resnet152](https://
 
 It can classify an image into 1000 categories ([list in the ImageNet Kaggle competition](https://www.kaggle.com/c/imagenet-object-localization-challenge/data)).
 
-Development with the Deep Learning library [fastai v1](https://docs.fast.ai/) and the online Web app server: [Render](https://render.com) ([deployment guide on Render](https://course-v3.fast.ai/deployment_render.html))
+Credit: development with the Deep Learning library [fastai v1](https://docs.fast.ai/) and the online Web app server: [Render](https://render.com) ([deployment guide on Render](https://course-v3.fast.ai/deployment_render.html)).
