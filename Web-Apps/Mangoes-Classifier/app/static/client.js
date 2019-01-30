@@ -32,12 +32,16 @@ function analyze() {
             else {
                 bgc_class = 'tommy-atkins'
             }
-            el('result-label').innerHTML = `<div class="recognized"><span class="${bgc_class}">${response['prediction']}</span>
-                                            <br />confidence of ${response['prob']}</div>
-                                            <div class="probs">[ ${response['probs'][0]}, ${response['probs'][1]} ]</div>`;
+            el('result-label').innerHTML = `<div class="result-style">
+                                                <div class="recognized ${bgc_class}">${response['prediction']}</div>
+                                                <div>confidence of ${response['prob']}</div>
+                                                <div class="probs">${response['probs'][0]}, ${response['probs'][1]}</div>
+                                            </div>`;
             } else {
-            el('result-label').innerHTML = `<div class="not-recognized">Image unrecognized<br /></div>
-                                            <div class="probs">[ ${response['probs'][0]}, ${response['probs'][1]} ]</div>`;
+            el('result-label').innerHTML = `<div class="result-style">
+                                                <div class="unrecognized">Image unrecognized</div>
+                                                <div class="probs">${response['probs'][0]}, ${response['probs'][1]}</div>
+                                            </div>`;
             }
         }
         el('analyze-button').innerHTML = 'Analyze';
