@@ -45,10 +45,10 @@ loop.close()
 
 @app.route('/')
 def index(request):
-    html = path/'view'/'index_imagenet_resnet152.html'
-    html = open(html, encoding="utf-8")
-    return HTMLResponse(html.read())
-    # return HTMLResponse(html.open().read())
+    html = path/'view'/'index.html'
+    # html = open(html, encoding="utf-8")
+    # return HTMLResponse(html.read())
+    return HTMLResponse(html.open().read())
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
