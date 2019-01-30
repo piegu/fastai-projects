@@ -161,6 +161,7 @@ a:hover, a:active {
 .result-label .probs{
     font-size: 0.8em;
     padding:5px;
+    margin-top: 10px;
 }
 
 button.choose-file-button {
