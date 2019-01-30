@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" type="text/css" href="../static/style.css" media="screen, handheld" />
+    <script src='../static/client.js'></script>
+    <title>Mangoes Classifier by Pierre Guillou</title>
+  </head>
+
+  <body>
+
+    <div class='section menu'></div>
+
+    <div class='page'>
+
+        <div class='section header'>
+          <header class='top-header'>
+            <h1>Mangoes Classifier</h1>
+            <p>Use images of <a href='https://en.wikipedia.org/wiki/Palmer_(mango)' target='_blank'>Palmer</a> or <a href='https://en.wikipedia.org/wiki/Tommy_Atkins_(mango)' target='_blank'>Tommy Atkins</a> mangoes!</p>
+          </header>
+        </div>
+
+        <div class='section content'>
+            <div class='main center'>
+                <div class='no-display'>
+                    <input id='file-input'
+                            class='no-display'
+                            type='file'
+                            name='file'
+                            accept='image/*'
+                            onchange='showPicked(this)'>
+                </div>
+                <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
+                <div class='analyze'>
+                    <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+                </div>
+                <div class='result-label'>
+                    <label id='result-label'></label>
+                </div>
+                <div class="image-picked">
+                    <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+                </div>
+                <div class='upload-label'>
+                    <label id='upload-label' class='center'>No file chosen</label>
+                </div>
+            </div>
+        </div>
+
+      <div class="section notes">
+        <p>Our classifier was trained with images from 2 classes (Palmer and Tommy Atkins) and 90% of well classified images had a class confidence level greater than 79% for Palmer and 68% for Tommy Atkins.</p>
+        <p>Therefore, any image analyzed here with a confidence level lower than the one of its predicted class will be considered as "unrecognized" (example: if the classifier assigns an image a confidence level of 78% for the Palmer class, "unrecognized" will be displayed).</p>
+      </div>
+
+    </div>
+
+    <div class='section footer'>
+      <p>Created by <a href="https://www.linkedin.com/in/pierreguillou" title="profile Linkedin of Pierre Guillou" target="_blank">Pierre Guillou</a> (Jan. 2019)
+      <br />with <a href="https://docs.fast.ai/" target="_blank">fastai v1</a> and <a href="https://www.render.com/" target="_blank">Render</a></p>
+    </div>
+
+  </body>
+</html>
