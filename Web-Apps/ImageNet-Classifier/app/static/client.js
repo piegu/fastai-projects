@@ -24,9 +24,13 @@ function analyze() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
+            // el('result-label').innerHTML = `Result = ${response['result']}`;
+
+
             el('result-label').innerHTML = `<div class="result-style">
                                                 <div class="imagenet">${response['result']}</div>
                                             </div>`;
+
         }
         el('analyze-button').innerHTML = 'Analyze';
     }
@@ -35,4 +39,3 @@ function analyze() {
     fileData.append('file', uploadFiles[0]);
     xhr.send(fileData);
 }
-
