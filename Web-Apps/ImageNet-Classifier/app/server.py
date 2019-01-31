@@ -9,8 +9,12 @@ from fastai import *
 from fastai.vision import *
 
 # resnet34
-export_file_url = 'https://drive.google.com/uc?export=download&id=1wRrX2mZ9acQzuzXRIngL_kGBsUbOo-c9'
-export_file_name = 'resnet34.pkl'
+# export_file_url = 'https://drive.google.com/uc?export=download&id=1wRrX2mZ9acQzuzXRIngL_kGBsUbOo-c9'
+# export_file_name = 'resnet34.pkl'
+
+# resnet101
+export_file_url = 'https://drive.google.com/uc?export=download&id=1bgqAF5zorjMyfKXxV6AGhi7UWmklerc4'
+export_file_name = 'resnet101.pkl'
 
 # resnet152
 # export_file_url = 'https://drive.google.com/uc?export=download&id=1HmUBN_KpIOAva2I1pVW6oBWb6C4iXFO4'
