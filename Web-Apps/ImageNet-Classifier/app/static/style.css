@@ -9,7 +9,6 @@ body {
 .page {
   display: flex;
   flex-wrap: wrap;
-  padding: 1em;
 }
 
 .section {
@@ -17,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .menu {
@@ -25,15 +25,14 @@ body {
 }
 
 .header {
-  padding: 10px;
+  padding-top: 1em;
 }
 
 .top-header {
-  text-align: center;
 }
 
 .top-header h1 {
-  font-size: 2em;
+  font-size: 2em; 
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -55,7 +54,11 @@ body {
 
 .notes {
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1.3em;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .notes p {
@@ -91,9 +94,10 @@ a:hover, a:active {
 }
 
 .center {
-    margin: auto;
-    text-align: center;
+/*    margin: auto;*/
+/*    text-align: center;
     font-size: 14px;
+    width:100%;*/
 }
 
 .title {
@@ -116,7 +120,7 @@ a:hover, a:active {
 }
 
 .upload-label {
-    padding: 10px;
+    /*padding: 10px;*/
     font-size: 12px;
 }
 
@@ -168,6 +172,7 @@ a:hover, a:active {
 .result-label .probs{
     font-size: 0.8em;
     padding:5px;
+    margin-top: 10px;
 }
 
 button.choose-file-button {
@@ -262,14 +267,17 @@ and (min-width : 1224px) {
     width: 960px;
     margin: 0 auto;
   }
-  .content {
+  .header {
   order: 1;
   }
-  .notes {
+  .content {
   order: 2;
   }
-  .footer {
+  .notes {
   order: 3;
+  }
+  .footer {
+  order: 4;
   }
 }
 
@@ -281,14 +289,17 @@ and (min-width : 1824px) {
     width: 960px;
     margin: 0 auto;
   }
-  .content {
+  .header {
   order: 1;
   }
-  .notes {
+  .content {
   order: 2;
   }
-  .footer {
+  .notes {
   order: 3;
+  }
+  .footer {
+  order: 4;
   }
 }
 
