@@ -26,7 +26,10 @@ function analyze() {
             var response = JSON.parse(e.target.responseText);
             // el('result-label').innerHTML = `Result = ${response['result']}`;
             el('result-label').innerHTML = `<div class="result-style">
-                                                <div class="imagenet">${response['result']}</div>
+                                                <div class="imagenet">
+                                                    ${response['pred_1']}
+                                                    <br />${response['pred_2']} - ${response['pred_3']}
+                                                </div>
                                             </div>`;
 
         }
