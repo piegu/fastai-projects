@@ -74,9 +74,9 @@ async def analyze(request):
     pred_2_class = learn.data.classes[idxs[1]]
     pred_3_class = learn.data.classes[idxs[2]]
     # Get best 3 predictions - probabilities
-    pred_1_prob = np.round(100*preds_sorted[0],2)
-    pred_2_prob = np.round(100*preds_sorted[1],2)
-    pred_3_prob = np.round(100*preds_sorted[2],2)
+    pred_1_prob = np.round(100*preds_sorted[0].item(),2)
+    pred_2_prob = np.round(100*preds_sorted[1].item(),2)
+    pred_3_prob = np.round(100*preds_sorted[2].item(),2)
 
     preds_best3 = [f'{pred_1_class} ({pred_1_prob}%)', f'{pred_2_class} ({pred_2_prob}%)', f'{pred_3_class} ({pred_3_prob}%)']
 

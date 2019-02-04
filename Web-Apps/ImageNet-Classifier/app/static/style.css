@@ -133,33 +133,21 @@ a:hover, a:active {
     margin-bottom: 1.05em;
     padding-bottom: 0px;
     /*background-color: #D6D9DC;*/
-    border: 1px solid #D6D9DC;
-    border-radius: 3px;
+    /*border: 1px solid #D6D9DC;*/
+    /*border-radius: 3px;*/
 }
 
 .result-label .imagenet {
-    background-color: #f44336;
+    background-color: #32b70e;
     color: #fff;
-    padding: 5px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .result-label .recognized {
     padding: 5px;
     margin-bottom: 5px;
-}
-
-.result-label .palmer {
-    background-color: #9eab28;
-    color: #fff;
-    margin-bottom: 5px;
-    padding: 5px;
-}
-
-.result-label .tommy-atkins {
-    background-color: #e15639;
-    color: #fff;
-    margin-bottom: 5px;
-    padding: 5px;
 }
 
 .result-label .unrecognized {
