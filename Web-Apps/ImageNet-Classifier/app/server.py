@@ -13,7 +13,7 @@ from fastai.vision import *
 # export_file_name = 'resnet34.pkl'
 
 # resnet50
-export_file_url = 'https://drive.google.com/uc?export=download&id=1Hpb-sFFFchoNyWQ9gWjDcY5HCjDjaj7d'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1DOjrzqcz0P4Yplleh9g_ETMT9qLVV3LX'
 export_file_name = 'resnet50.pkl'
 
 # resnet101
