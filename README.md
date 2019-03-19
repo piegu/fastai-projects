@@ -3,14 +3,17 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v1.0
 
-### Data Augmentation by fastai v1
-The jupyter notebook [data-augmentation-by-fastai-v1.ipynb](https://github.com/piegu/fastai-projects/blob/master/data-augmentation-by-fastai-v1.ipynb) presents the code to apply transformations on images with fastai v1.
+### MURA abnormality detection
+The objective of the jupyter notebook [MURA | Abnormality detection](https://github.com/piegu/fastai-projects/blob/master/MURA_abnormality_detection.ipynb) is to show how the fastai v1 techniques and code allow to get a top-level classifier in the world of health.
+
+### ImageNet Classifier Web App
+It is an [images classifier](https://github.com/piegu/fastai-projects/blob/master/Web-Apps/ImageNet-Classifier/README.md) that use the Deep Learning model resnet (the resnet50 version) that won the ImageNet competition in 2015 (ILSVRC2015). It classifies an image into 1000 categories.
 
 ### Pretrained ImageNet Classifier by fastai v1
 The objective of the jupyter notebook [pretrained-imagenet-classifier-fastai-v1.ipynb](https://github.com/piegu/fastai-projects/blob/master/pretrained-imagenet-classifier-fastai-v1.ipynb) is to use fastai v1 instead of Pytorch code in order to classify images into 1000 classes by using an ImageNet winner model.
 
-### ImageNet Classifier Web App
-It is an [images classifier](https://github.com/piegu/fastai-projects/blob/master/Web-Apps/ImageNet-Classifier/README.md) that use the Deep Learning model resnet (the resnet50 version) that won the ImageNet competition in 2015 (ILSVRC2015). It classifies an image into 1000 categories.
+### Data Augmentation by fastai v1
+The jupyter notebook [data-augmentation-by-fastai-v1.ipynb](https://github.com/piegu/fastai-projects/blob/master/data-augmentation-by-fastai-v1.ipynb) presents the code to apply transformations on images with fastai v1.
 
 ## fastai version BEFORE v1.0
 
