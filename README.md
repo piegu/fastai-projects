@@ -3,6 +3,13 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v1.0
 
+### Vendedor IA | Ajudando vendedores de Brasal Veículos (text in Portuguese)
+O **Hackathon Brasal/PCTec-UnB 2019** foi uma maratona de dados (dias 9 e 10 de maio de 2019), que reuniu estudantes, profissionais e comunidade, com o desafio de em dois dias, realizaram um projeto de Bussiness Intelligence para um cliente real: [Brasal Veículos](http://vw.brasal.com.br/). Aconteceu no [CDT](http://www.cdt.unb.br/) da Universidade de Brasília (UnB) no Brasil.
+Nesse contexto, minha equipe desenvolveu o projeto **"Vendedor IA" (VIA), um conjunto de modelos de Inteligência Artificial (IA) usando o Deep Learning** cujo princípio é descrito nos parágrafos seguintes.
+2 jupyter notebooks forma criados:
+1. **Data clean** ([vendas_veiculos_brasal_data_clean.ipynb](https://github.com/piegu/fastai-projects/blob/master/vendas_veiculos_brasal_data_clean.ipynb)): é o notebook de preparação da tabela de dados de vendas para treinar os modelos do VIA.
+2. **Regressão** ([vendedor_IA_vendas_veiculos_brasal_REGRESSAO.ipynb](https://github.com/piegu/fastai-projects/blob/master/vendedor_IA_vendas_veiculos_brasal_REGRESSAO.ipynb)): é o notebook de treinamento do modelo que fornece o orçamento que o cliente está disposto a gastar na compra de um veículo.
+
 ### MURA abnormality detection
 The objective of the jupyter notebook [MURA | Abnormality detection](https://github.com/piegu/fastai-projects/blob/master/MURA_abnormality_detection.ipynb) is to show how the fastai v1 techniques and code allow to get a top-level classifier in the world of health.
 [ NEW ] We managed to increase our kappa score in this [notebook (part 2)](https://github.com/piegu/fastai-projects/blob/master/MURA_abnormality_detection-2.ipynb).
