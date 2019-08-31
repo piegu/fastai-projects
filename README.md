@@ -3,6 +3,14 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v1.0
 
+### NLP | Platform independent python script for Wikipedia text extraction 
+
+The extraction script [WikiExtractor.py](https://github.com/attardi/wikiextractor/blob/master/WikiExtractor.py) does not work when running fastai on Windows 10 because of the 'utf-8' encoding that is platform-dependent default in the actual code of the file.
+
+Thanks to [Albert Villanova del Moral](https://github.com/albertvillanova) that did the pull request "[Force 'utf-8' encoding without relying on platform-dependent default](https://github.com/attardi/wikiextractor/pull/183/files)" (but not merged until now (31st of August, 2019) by the script author [Giuseppe Attardi](https://github.com/attardi)), we know how to change the code. Thanks to both of them!
+
+Thus, the file [WikiExtractor.py saved here](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) has the working code (ie, working on all platforms and in particular on Windows).
+
 ### Vendedor IA | Ajudando vendedores de Brasal Veículos (text in Portuguese)
 O **Hackathon Brasal/PCTec-UnB 2019** foi uma maratona de dados (dias 9 e 10 de maio de 2019), que reuniu estudantes, profissionais e comunidade, com o desafio de em dois dias, realizaram um projeto de Bussiness Intelligence para um cliente real: [Brasal Veículos](http://vw.brasal.com.br/). Aconteceu no [CDT](http://www.cdt.unb.br/) da Universidade de Brasília (UnB) no Brasil.
 Nesse contexto, minha equipe desenvolveu o projeto **"Vendedor IA" (VIA), um conjunto de modelos de Inteligência Artificial (IA) usando o Deep Learning** cujo princípio é descrito nos 2 jupyter notebooks que foram criados:
