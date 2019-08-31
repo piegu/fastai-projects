@@ -9,7 +9,10 @@ The extraction script [WikiExtractor.py](https://github.com/attardi/wikiextracto
 
 Thanks to [Albert Villanova del Moral](https://github.com/albertvillanova) that did the pull request "[Force 'utf-8' encoding without relying on platform-dependent default](https://github.com/attardi/wikiextractor/pull/183/files)" (but not merged until now (31st of August, 2019) by the script author [Giuseppe Attardi](https://github.com/attardi)), we know how to change the code. Thanks to both of them!
 
-Thus, the file [WikiExtractor.py saved here](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) has the working code (ie, working on all platforms and in particular on Windows).
+Links:
+- [Original WikiExtracto](https://github.com/attardi/wikiextractor)r (but not updated with platform independent code)
+- [Updated WikiExtractor](https://github.com/albertvillanova/wikiextractor/tree/fix) from Albert Villanova del Mora (**UPDATED !!!**)
+- My file [WikiExtractor.py saved here](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) with the platform independent code (ie, working on all platforms and in particular on Windows)
 
 ### Vendedor IA | Ajudando vendedores de Brasal Veículos (text in Portuguese)
 O **Hackathon Brasal/PCTec-UnB 2019** foi uma maratona de dados (dias 9 e 10 de maio de 2019), que reuniu estudantes, profissionais e comunidade, com o desafio de em dois dias, realizaram um projeto de Bussiness Intelligence para um cliente real: [Brasal Veículos](http://vw.brasal.com.br/). Aconteceu no [CDT](http://www.cdt.unb.br/) da Universidade de Brasília (UnB) no Brasil.
