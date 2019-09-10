@@ -3,6 +3,10 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v1.0
 
+### NLP | Platform independent python scripts for fastai NLP course
+
+Following our publication of the [WikiExtractor.py saved here](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) file which is platform-independent (ie running on all platforms, especially Windows), we publish the [nlputils2.py](https://github.com/piegu/fastai-projects/blob/master/nlputils2.py) file, which is the platform-independent version of the [nlputils.py](https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Ffastai%2Fcourse-nlp%2Fblob%2Fmaster%2Fnlputils.py) file of the fastal NLP course (more: we have split the original methods into many to use them separately and we have added one that cleans a text file).
+
 ### NLP | Platform independent python script for Wikipedia text extraction 
 
 The extraction script [WikiExtractor.py](https://github.com/attardi/wikiextractor/blob/master/WikiExtractor.py) does not work when running fastai on Windows 10 because of the 'utf-8' encoding that is platform-dependent default in the actual code of the file.
