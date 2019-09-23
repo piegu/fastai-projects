@@ -5,7 +5,12 @@ Jupyter notebooks that use the Fastai library
 
 ### NLP | Platform independent python scripts for fastai NLP course
 
-Following our publication of the [WikiExtractor.py](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) file which is platform-independent (ie running on all platforms, especially Windows), we publish our [nlputils2.py](https://github.com/piegu/fastai-projects/blob/master/nlputils2.py) file, which is the platform-independent version of the [nlputils.py](https://github.com/fastai/course-nlp/blob/master/nlputils.py) file of the [fastai NLP course](https://www.fast.ai/2019/07/08/fastai-nlp/) (more: we have split the original methods into many to use them separately and we have added one that cleans a text file).
+Following our publication of the [WikiExtractor.py](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) file which is platform-independent (ie running on all platforms, especially Windows), we publish our nlputils2.py file, which is the platform-independent version of the [nlputils.py](https://github.com/fastai/course-nlp/blob/master/nlputils.py) file of the [fastai NLP course](https://www.fast.ai/2019/07/08/fastai-nlp/) (more: we have split the original methods into many to use them separately and we have added one that cleans a text file).
+
+**[ EDIT 09/23/2019 ]**
+
+- The repository of the nlputils2.py file has changed to https://github.com/piegu/language-models
+- Its new link is: https://github.com/piegu/language-models/blob/master/nlputils2.py
 
 ### NLP | Platform independent python script for Wikipedia text extraction 
 
