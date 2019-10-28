@@ -5,7 +5,7 @@ Jupyter notebooks that use the Fastai library
 
 ### Images | Reduction of images channels to 3 in order to use the normal fastai Transfer Learning techniques
 
-This notebook [lesson1-pets_essential_with_xc_to_3c.ipynb](https://github.com/piegu/fastai-projects/blob/master/lesson1-pets_essential_with_xc_to_3c.ipynb) shows how to modify [learner.py](https://github.com/fastai/fastai/blob/master/fastai/vision/learner.py) to a new file [learner_xc_to_3c.py](https://github.com/piegu/fastai-projects/blob/master/learner_xc_to_3c.py) (learner x channels to 3 channels) to put a ConvNet in a fastai cnn_learner() before the pre-trained model like resnet (followed by a normalization by imagenet_stats).
+This notebook [lesson1-pets_essential_with_xc_to_3c.ipynb](https://github.com/piegu/fastai-projects/blob/master/lesson1-pets_essential_with_xc_to_3c.ipynb) ([nbviewer](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/lesson1-pets_essential_with_xc_to_3c.ipynb)) shows how to modify [learner.py](https://github.com/fastai/fastai/blob/master/fastai/vision/learner.py) to a new file [learner_xc_to_3c.py](https://github.com/piegu/fastai-projects/blob/master/learner_xc_to_3c.py) (learner x channels to 3 channels) to put a ConvNet in a fastai cnn_learner() before the pre-trained model like resnet (followed by a normalization by imagenet_stats).
 
 This ConvNet as first layer allows to transform any images of the dataloader with n channels to an image with 3 channels. During the training, the filters of this ConvNet as first layer will be learnt. Thanks to that, it is possible to go on using fastai Transfer Learning functions even with images with more than 3 channels RGB like satellite images.
 
