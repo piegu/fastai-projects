@@ -3,6 +3,14 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v1.0
 
+### Images | Reduction of images channels to 3 in order to use the normal fastai Transfer Learning techniques
+
+This notebook [lesson1-pets_essential_with_xc_to_3c.ipynb](https://github.com/piegu/fastai-projects/blob/master/lesson1-pets_essential_with_xc_to_3c.ipynb) shows how to modify [learner.py](https://github.com/fastai/fastai/blob/master/fastai/vision/learner.py) to a new file [learner_xc_to_3c.py](https://github.com/piegu/fastai-projects/blob/master/learner_xc_to_3c.py) (learner x channels to 3 channels) to put a ConvNet in a fastai cnn_learner() before the pre-trained model like resnet (followed by a normalization by imagenet_stats).
+
+This ConvNet as first layer allows to transform any images of the dataloader with n channels to an image with 3 channels. During the training, the filters of this ConvNet as first layer will be learnt. Thanks to that, it is possible to go on using fastai Transfer Learning functions even with images with more than 3 channels RGB like satellite images.
+
+**Warning** As the [Oxford IIIT Pet dataset](http://www.robots.ox.ac.uk/~vgg/data/pets/) already has 3 channels by image, there is no need here to change this number of channels. We only used this dataset to create our code. However, it would be more interesting to apply this code to images with more than 3 channels like images with 16 channels of the [Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection/).
+
 ### NLP | Platform independent python scripts for fastai NLP course
 
 Following our publication of the [WikiExtractor.py](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) file which is platform-independent (ie running on all platforms, especially Windows), we publish our nlputils2.py file, which is the platform-independent version of the [nlputils.py](https://github.com/fastai/course-nlp/blob/master/nlputils.py) file of the [fastai NLP course](https://www.fast.ai/2019/07/08/fastai-nlp/) (more: we have split the original methods into many to use them separately and we have added one that cleans a text file).
