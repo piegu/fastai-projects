@@ -17,7 +17,8 @@ __all__ = ['cnn_learner', 'create_cnn', 'create_cnn_model', 'create_body', 'crea
 # By default split models between first and second layer
 def _default_split(m:nn.Module): return (m[1],)
 # Split a resnet style model
-def _resnet_split(m:nn.Module): return (m[1][6],m[2]) #change
+# def _resnet_split(m:nn.Module): return (m[0][6],m[1]) #change
+def _resnet_split(m:nn.Module): return (m[3][6],m[4]) #change
 # Split squeezenet model on maxpool layers
 def _squeezenet_split(m:nn.Module): return (m[0][0][5], m[0][0][8], m[1])
 def _densenet_split(m:nn.Module): return (m[0][0][7],m[1])
@@ -81,6 +82,14 @@ def create_head(nf:int, nc:int, lin_ftrs:Optional[Collection[int]]=None, ps:Floa
     if bn_final: layers.append(nn.BatchNorm1d(lin_ftrs[-1], momentum=0.01))
     return nn.Sequential(*layers)
 
+class Normalize(torch.nn.Module): #change
+    def __init__(self, stats): #change
+        super().__init__() #change
+        self.stats = stats #change
+
+    def forward(self, x): #change
+        return (x-tensor(self.stats[0])[...,None,None].cuda()) / tensor(self.stats[1])[...,None,None].cuda() #change
+
 def create_cnn_model(base_arch:Callable, nc:int, cut:Union[int,Callable]=None, pretrained:bool=True,
                      lin_ftrs:Optional[Collection[int]]=None, ps:Floats=0.5, custom_head:Optional[nn.Module]=None,
                      bn_final:bool=False, concat_pool:bool=True):
@@ -91,7 +100,8 @@ def create_cnn_model(base_arch:Callable, nc:int, cut:Union[int,Callable]=None, p
         head = create_head(nf, nc, lin_ftrs, ps=ps, concat_pool=concat_pool, bn_final=bn_final)
     else: head = custom_head
     xc_to_3c = nn.Conv2d(3,3,kernel_size=3, stride=1, padding=1) #change
-    return nn.Sequential(xc_to_3c, body, head)  #change
+    norm = Normalize(imagenet_stats) #change
+    return nn.Sequential(xc_to_3c, nn.ReLU(), norm, body, head)  #change
 
 def cnn_learner_xc_to_3c(data:DataBunch, base_arch:Callable, n_channels:int=3, cut:Union[int,Callable]=None, pretrained:bool=True,
                 lin_ftrs:Optional[Collection[int]]=None, ps:Floats=0.5, custom_head:Optional[nn.Module]=None,
