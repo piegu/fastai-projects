@@ -9,10 +9,10 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=13Nxml5y0VVrn7J8GjTuxZDO1WwR2YslX'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1FTGw0bqedfDFIw6iGTlCQ7w8oBb4oztZ'
 export_file_name = 'export.pkl'
 
-classes = ['macbook', 'notmacbook']
+classes = ['with_glasses', 'without_glasses']
 path = Path(__file__).parent
 
 app = Starlette()
