@@ -3,8 +3,14 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v1.0
 
-### Images | Reduction of images channels to 3 in order to use the normal fastai Transfer Learning techniques
+### Aplicação template para fazer deploy de modelos fastai para um Web App
+Este [repositório](https://github.com/piegu/glasses-or-not) pode user usado como ponto de partida para fazer deploy de modelos do fastai no Heroku.
 
+A aplicativo simples descrito aqui está em https://glasses-or-not.herokuapp.com/. Teste com imagens de você com e sem oculos!
+
+Este é um [tutorial](https://github.com/piegu/glasses-or-not/blob/master/tutorial/Web_app_fastai.md) rápido para fazer o deploy no Heroku dos seus modelos treinados com apenas alguns cliques. Ele vem com este repositório template que usa o modelo de Classificação de Ursos do Jeremy Howard da [lição 2](https://www.youtube.com/watch?v=Egp4Zajhzog&feature=youtu.be).
+
+### Images | Reduction of images channels to 3 in order to use the normal fastai Transfer Learning techniques
 This notebook [lesson1-pets_essential_with_xc_to_3c.ipynb](https://github.com/piegu/fastai-projects/blob/master/lesson1-pets_essential_with_xc_to_3c.ipynb) ([nbviewer](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/lesson1-pets_essential_with_xc_to_3c.ipynb)) shows how to modify [learner.py](https://github.com/fastai/fastai/blob/master/fastai/vision/learner.py) to a new file [learner_xc_to_3c.py](https://github.com/piegu/fastai-projects/blob/master/learner_xc_to_3c.py) (learner x channels to 3 channels) to put a ConvNet in a fastai cnn_learner() before the pre-trained model like resnet (followed by a normalization by imagenet_stats).
 
 This ConvNet as first layer allows to transform any images of the dataloader with n channels to an image with 3 channels. During the training, the filters of this ConvNet as first layer will be learnt. Thanks to that, it is possible to go on using fastai Transfer Learning functions even with images with more than 3 channels RGB like satellite images.
@@ -12,16 +18,13 @@ This ConvNet as first layer allows to transform any images of the dataloader wit
 **Warning** As the [Oxford IIIT Pet dataset](http://www.robots.ox.ac.uk/~vgg/data/pets/) already has 3 channels by image, there is no need here to change this number of channels. We only used this dataset to create our code. However, it would be more interesting to apply this code to images with more than 3 channels like images with 16 channels of the [Dstl Satellite Imagery Feature Detection](https://www.kaggle.com/c/dstl-satellite-imagery-feature-detection/).
 
 ### NLP | Platform independent python scripts for fastai NLP course
-
 Following our publication of the [WikiExtractor.py](https://github.com/piegu/fastai-projects/blob/master/WikiExtractor.py) file which is platform-independent (ie running on all platforms, especially Windows), we publish our nlputils2.py file, which is the platform-independent version of the [nlputils.py](https://github.com/fastai/course-nlp/blob/master/nlputils.py) file of the [fastai NLP course](https://www.fast.ai/2019/07/08/fastai-nlp/) (more: we have split the original methods into many to use them separately and we have added one that cleans a text file).
 
 **[ EDIT 09/23/2019 ]**
-
 - The repository of the nlputils2.py file has changed to https://github.com/piegu/language-models
 - Its new link is: https://github.com/piegu/language-models/blob/master/nlputils2.py
 
 ### NLP | Platform independent python script for Wikipedia text extraction 
-
 The extraction script [WikiExtractor.py](https://github.com/attardi/wikiextractor/blob/master/WikiExtractor.py) does not work when running fastai on Windows 10 because of the 'utf-8' encoding that is platform-dependent default in the actual code of the file.
 
 Thanks to [Albert Villanova del Moral](https://github.com/albertvillanova) that did the pull request "[Force 'utf-8' encoding without relying on platform-dependent default](https://github.com/attardi/wikiextractor/pull/183/files)" (but not merged until now (31st of August, 2019) by the script author [Giuseppe Attardi](https://github.com/attardi)), we know how to change the code. Thanks to both of them!
@@ -42,6 +45,8 @@ The objective of the jupyter notebook [MURA | Abnormality detection](https://git
 [ NEW ] We managed to increase our kappa score in this [notebook (part 2)](https://github.com/piegu/fastai-projects/blob/master/MURA_abnormality_detection-2.ipynb).
 
 ### ImageNet Classifier Web App
+**[ EDIT 06/11/2019 ]** This Web app is not online anymore. If you want to deploy it on Render, check the ["Deploying on Render" fastai guide](https://course.fast.ai/deployment_render.html).
+
 It is an [images classifier](https://github.com/piegu/fastai-projects/blob/master/Web-Apps/ImageNet-Classifier/README.md) that use the Deep Learning model resnet (the resnet50 version) that won the ImageNet competition in 2015 (ILSVRC2015). It classifies an image into 1000 categories.
 
 ### Pretrained ImageNet Classifier by fastai v1
