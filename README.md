@@ -1,6 +1,11 @@
 # fastai-projects
 Jupyter notebooks that use the Fastai library
 
+## fastai v2.0
+
+### Comparison of sizes of learn.export() files by batch size
+The objective of this notebook is to show that the sizes of pkl files created by learn.export() of fastai v2 are different depending on the batch size used. This is odd, no?
+
 ## fastai v1.0
 
 ### Aplicação template para fazer deploy de modelos fastai para um Web App
