@@ -3,6 +3,10 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### How fastai v2 deals with batch sizes for the training and validation datasets
+
+The objective of this [notebook](https://github.com/piegu/fastai-projects/blob/master/fastaiv2_batchsize_training_validation_datasets.ipynb) is to explain how [fastai v2](https://github.com/fastai/fastai2) deals with batch sizes for the training and validation datasets.
+
 ### Comparison of sizes of learn.export() files by batch size
 The objective of this [notebook](https://github.com/piegu/fastai-projects/blob/master/learn_export_files_by_batchsize_fastaiv2.ipynb) is to show that the sizes of pkl files created by learn.export() of fastai v2 are different depending on the batch size used. This is odd, no?
 
