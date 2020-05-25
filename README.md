@@ -3,7 +3,7 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
-### How to create groups of layers, each one with a different Learning Rate?
+### How to create groups of layers and each one with a different Learning Rate?
 
 The objective of this [notebook](https://github.com/piegu/fastai-projects/blob/master/groups_layers_different_learning_rates_fastaiv2.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/groups_layers_different_learning_rates_fastaiv2.ipynb)) is to explain how to create parameters groups for a model with fastai v2 in order to train each one with a different learning rate and how to pass the list of Learning rates.
 
