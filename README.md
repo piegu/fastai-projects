@@ -3,6 +3,10 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### How to create groups of layers, each one with a different Learning Rate?
+
+The objective of this [notebook](https://github.com/piegu/fastai-projects/blob/master/groups_layers_different_learning_rates_fastaiv2.ipynb) is to explain how to create parameters groups for a model with fastai v2 in order to train each one with a different learning rate and how to pass the list of Learning rates.
+
 ### How fastai v2 deals with batch sizes for the training and validation datasets
 
 The objective of this [notebook](https://github.com/piegu/fastai-projects/blob/master/fastaiv2_batchsize_training_validation_datasets.ipynb) is to explain how [fastai v2](https://github.com/fastai/fastai2) deals with batch sizes for the training and validation datasets.
