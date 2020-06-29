@@ -3,6 +3,10 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### Data Parallel (DP)
+
+The notebook [05_pet_breeds_DataParallel.ipynb]() gives the code to run for training a Deep Learning model in Data Parallel (DP) mode with PyTorch ou fastai v2. It is inspired by the notebook [05_pet_breeds.ipynb](https://github.com/fastai/fastbook/blob/master/05_pet_breeds.ipynb) from the [fastbook](https://github.com/fastai/fastbook/) (fastai v2), the [Distributed and parallel training](https://dev.fast.ai/distributed#ParallelTrainer) fastai v2 documentation and the notebook [train_imagenette.py](https://github.com/fastai/fastai2/blob/master/nbs/examples/train_imagenette.py).
+
 ### How to create groups of layers and each one with a different Learning Rate?
 
 The objective of this [notebook](https://github.com/piegu/fastai-projects/blob/master/groups_layers_different_learning_rates_fastaiv2.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/groups_layers_different_learning_rates_fastaiv2.ipynb?flush_cache=true)) is to explain how to create parameters groups for a model with fastai v2 in order to train each one with a different learning rate, how to pass the list of Learning rates and how to check the Learning Rates effectively used by the Optimizer during the training.
