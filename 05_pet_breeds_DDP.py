@@ -59,4 +59,4 @@ def main(
 
         with partial(ctx, gpu)(): # distributed traing requires "-m fastai2.launch"
             print(f"Training in {ctx.__name__} context on GPU {gpu if gpu is not None else list(range(n_gpu))}")
-            learn.fine_tune(1)
+            learn.fine_tune(2)
