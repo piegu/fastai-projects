@@ -3,6 +3,14 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### Distributed Data Parallel (DDP)
+
+The script [05_pet_breeds_DDP.py](https://github.com/piegu/fastai-projects/blob/master/05_pet_breeds_DDP.py) gives the code to run for training a Deep Learning model in Distributed Data Parallel (DDP) mode with fastai v2. It is inspired by the notebook [05_pet_breeds.ipynb](https://github.com/fastai/fastbook/blob/master/05_pet_breeds.ipynb) from the [fastbook](https://github.com/fastai/fastbook/#the-fastai-book---draft) (fastai v2), the [Distributed and parallel training](https://dev.fast.ai/distributed#DistributedTrainer) fastai v2 documentation and the notebook [train_imagenette.py](https://github.com/fastai/fastai2/blob/master/nbs/examples/train_imagenette.py).
+
+In order to get it run, you need to launch the following command within a fastai 2 virtual environment in a Terminal of a server with at least 2 GPUs:
+
+`python -m fastai2.launch 05_pet_breeds_DDP.py`
+
 ### Data Parallel (DP)
 
 The notebook [05_pet_breeds_DataParallel.ipynb](https://github.com/piegu/fastai-projects/blob/master/05_pet_breeds_DataParallel.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/05_pet_breeds_DataParallel.ipynb)) gives the code to run for training a Deep Learning model in Data Parallel (DP) mode with PyTorch and fastai v2. It is inspired by the notebook [05_pet_breeds.ipynb](https://github.com/fastai/fastbook/blob/master/05_pet_breeds.ipynb) from the [fastbook](https://github.com/fastai/fastbook/#the-fastai-book---draft) (fastai v2), the [Distributed and parallel training](https://dev.fast.ai/distributed#ParallelTrainer) fastai v2 documentation and the notebook [train_imagenette.py](https://github.com/fastai/fastai2/blob/master/nbs/examples/train_imagenette.py).
