@@ -3,6 +3,13 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### Byte-level BPE, an universal tokenizer but...
+
+In this study, we will see that, while it is true that a BBPE tokenizer (Byte-level Byte-Pair-Encoding) trained on a huge monolingual corpus can tokenize any word of any language (there is no unknown token), it requires on average almost 70% of additional tokens when it is applied to a text in a language different from that used for its training. This information is key when it comes to choosing a tokenizer to train a natural language model like a Transformer model.
+- [post](https://medium.com/@pierre_guillou/byte-level-bpe-an-universal-tokenizer-but-aff932332ffe) in medium
+- notebook [Byte-level-BPE_universal_tokenizer_but.ipynb](https://github.com/piegu/fastai-projects/blob/master/Byte-level-BPE_universal_tokenizer_but.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/Byte-level-BPE_universal_tokenizer_but.ipynb))
+- Wikipedia downloading functions in the file [nlputils_fastai2.py](https://github.com/piegu/fastai-projects/blob/master/nlputils_fastai2.py)
+
 ### Distributed Data Parallel (DDP)
 
 The script [05_pet_breeds_DDP.py](https://github.com/piegu/fastai-projects/blob/master/05_pet_breeds_DDP.py) gives the code to run for training a Deep Learning model in Distributed Data Parallel (DDP) mode with fastai v2. It is inspired by the notebook [05_pet_breeds.ipynb](https://github.com/fastai/fastbook/blob/master/05_pet_breeds.ipynb) from the [fastbook](https://github.com/fastai/fastbook/#the-fastai-book---draft) (fastai v2), the [Distributed and parallel training](https://dev.fast.ai/distributed#DistributedTrainer) fastai v2 documentation and the notebook [train_imagenette.py](https://github.com/fastai/fastai2/blob/master/nbs/examples/train_imagenette.py).
