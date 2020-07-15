@@ -3,6 +3,14 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### Faster than training from scratch — Fine-tuning the English GPT-2 in any language with Hugging Face and fastai v2 (practical case with Portuguese)
+
+In this [notebook](https://github.com/piegu/fastai-projects/blob/master/finetuning-English-GPT2-any-language-Portuguese-HuggingFace-fastaiv2.ipynb), instead of training from scratch, we will see how to fine-tune in just over a day, on one GPU and with a little more than 1GB of training data an English pre-trained transformer-based language model to any another language. As a practical case, we fine-tune to Portuguese the English pre-trained GPT-2 by wrapping the Transformers and Tokenizers libraries of Hugging Face into fastai v2. We thus create a new language model: [GPorTuguese-2](https://huggingface.co/pierreguillou/gpt2-small-portuguese), a language model for Portuguese text generation (and more NLP tasks...).
+
+**Note**: as the full notebook is very detailed, use this [fast notebook](https://github.com/piegu/fastai-projects/blob/master/finetuning-English-GPT2-any-language-Portuguese-HuggingFace-fastaiv2_FAST.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/finetuning-English-GPT2-any-language-Portuguese-HuggingFace-fastaiv2_FAST.ipynb)) if you just want to run the code without explanation.
+
+![GPorTuguese-2 (Portuguese GPT-2 small) , a language model for Portuguese text generation (and more NLP tasks...)](https://github.com/piegu/fastai-projects/blob/master/images/hfmh.png "GPorTuguese-2 (Portuguese GPT-2 small) , a language model for Portuguese text generation (and more NLP tasks...)")
+
 ### Byte-level BPE, an universal tokenizer but...
 
 In this study, we will see that, while it is true that a BBPE tokenizer (Byte-level Byte-Pair-Encoding) trained on a huge monolingual corpus can tokenize any word of any language (there is no unknown token), it requires on average almost 70% of additional tokens when it is applied to a text in a language different from that used for its training. This information is key when it comes to choosing a tokenizer to train a natural language model like a Transformer model.
