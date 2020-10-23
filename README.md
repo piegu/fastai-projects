@@ -5,7 +5,7 @@ Jupyter notebooks that use the Fastai library
 
 ### Product based on a Deep Learning model (by fastai v2)
 
-In this [notebook](https://github.com/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastai_v2.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastai_v2.ipynb)), a Web App is created from the training of a Deep Learning model which uses all the fastai v2 techniques taught by Jeremy Howard in his 2020 course ([Practical Deep Learning for Coders](https://course.fast.ai/)). A post in medium ([Product based on a Deep Learning model (by fastai v2)](https://medium.com/@pierre_guillou/product-based-on-a-deep-learning-model-by-fastai-v2-8bd3371ba11c)) gives all explanation about the use of its app.
+In this [notebook](https://github.com/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastaiv2.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastaiv2.ipynb)), a Web App is created from the training of a Deep Learning model which uses all the fastai v2 techniques taught by Jeremy Howard in his 2020 course ([Practical Deep Learning for Coders](https://course.fast.ai/)). A post in medium ([Product based on a Deep Learning model (by fastai v2)](https://medium.com/@pierre_guillou/product-based-on-a-deep-learning-model-by-fastai-v2-8bd3371ba11c)) gives all explanation about the use of its app.
 
 ### Faster than training from scratch — Fine-tuning the English GPT-2 in any language with Hugging Face and fastai v2 (practical case with Portuguese)
 
