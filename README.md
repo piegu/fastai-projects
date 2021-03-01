@@ -3,6 +3,10 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### Weather Images Classification (Rain, Cloudy, Shine, Sunrise)
+
+In this [notebook](https://github.com/piegu/fastai-projects/blob/master/01_intro-Classification_Weather_Images.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/01_intro-Classification_Weather_Images.ipynb)), we show how to use the fastai code from the [first notebook](https://github.com/fastai/fastbook/blob/master/01_intro.ipynb) of the [2020 fastai course](https://course.fast.ai/) with another dataset of images. The idea is to prove the possibility of quickly reusing the fastai code with its own data.
+
 ### Product based on a Deep Learning model (by fastai v2)
 
 In this [notebook](https://github.com/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastaiv2.ipynb) ([pdf](https://github.com/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastai_v2.pdf), [nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/Product_based_on_a_Deep_Learning_model_by_fastaiv2.ipynb)), a Web App is created from the training of a Deep Learning model which uses all the fastai v2 techniques taught by Jeremy Howard in his 2020 course ([Practical Deep Learning for Coders](https://course.fast.ai/)). A post in medium ([Product based on a Deep Learning model (by fastai v2)](https://medium.com/@pierre_guillou/product-based-on-a-deep-learning-model-by-fastai-v2-8bd3371ba11c)) gives all explanation about the use of its app.
