@@ -3,6 +3,10 @@ Jupyter notebooks that use the Fastai library
 
 ## fastai v2.0
 
+### Tutorial Pytorch
+
+In this [notebook](https://github.com/piegu/fastai-projects/blob/master/tutorial_pytorch.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/tutorial_pytorch.ipynb)), we show how to use Pytorch.
+
 ### Indoor Scene Recognition
 
 In this [notebook](https://github.com/piegu/fastai-projects/blob/master/Indoor_Scene_Recognition.ipynb) ([nbviewer version](https://nbviewer.jupyter.org/github/piegu/fastai-projects/blob/master/Indoor_Scene_Recognition.ipynb)), we show how to use the fastai code from the [first notebook](https://github.com/fastai/fastbook/blob/master/01_intro.ipynb) and [second notebook](https://github.com/fastai/fastbook/blob/master/02_production.ipynb) of the [2020 fastai course](https://course.fast.ai/) with another dataset of images. The idea is to prove the possibility of quickly reusing the fastai code with its own data.
