@@ -25,7 +25,7 @@ def get_wiki(path,lang):
     os.chdir(path)
     
     # Get wikiextractor
-    if not (path/'wikiextractor').exists(): os.system('git clone https://github.com/attardi/wikiextractor.git')
+    if not (path/'wikiextractor').exists(): os.system('git clone https://github.com/attardi/wikiextractor.git && cd wikiextractor && git checkout 16186e290d9eb0eb3a3784c6c0635a9ed7e855c3')
 
     # Extraction
     print("extracting...")
